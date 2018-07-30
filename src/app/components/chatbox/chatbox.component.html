@@ -1,0 +1,24 @@
+<div class="chat_box">
+    <div class=" chat_head"> 
+        <span class="">Chat {{contactList.length}}</span>         
+    </div>
+     <div class="chat-box_wrap">
+        <div class="chat_body"> 
+              <ul class="nav">
+                      <li *ngFor="let chatUser of contactList" nav-item>
+                          <a class="nav-link" >
+                            <div class="col-sm-12 user-chat">
+                                <img class="chat-img" src= {{userImageUrl+chatUser.UserId}} alt="Message User Image"> {{chatUser.UserName}}
+                                <span class="dot-online"></span>
+                            </div>
+                          </a>
+                      </li>
+             </ul>           
+        </div>
+        <div class="chat_footer">
+            <div class="col-sm-12 search-box-chat">
+                <input class="form-control input-sm" placeholder="Search Here...">
+              </div>  
+        </div>  
+     </div>
+  </div> 
